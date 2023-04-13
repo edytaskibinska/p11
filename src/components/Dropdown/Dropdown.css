@@ -1,0 +1,38 @@
+.dropdown {
+  border-radius: 10px;
+  background-color: #f6f6f6;
+  color: #fff;
+  font-size: 14px;
+  position: relative;
+  min-height: 100px;
+  max-width: 340px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.dropTitle {
+  border-radius: 10px;
+  background-color: #ff6060;
+  line-height: 52px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.thumbText {
+  position: absolute;
+  bottom: 10px;
+  padding: 20px;
+  font-size: 18px;
+}
+.dropContent {
+  color: #ff6060;
+}
+.dropContent li {
+  list-style: none;
+}
+
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}

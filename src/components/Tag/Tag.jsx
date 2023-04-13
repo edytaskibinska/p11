@@ -1,10 +1,8 @@
-function Tag() {
-    return (
-      <div className="Tag">
-        tag
-      </div>
-    );
-  }
-  
-  export default Tag;
-  
+
+import './Tag.css';
+
+function Tag({children}) {
+  return <div className="tag">{children}</div>;
+}
+
+export default Tag;
