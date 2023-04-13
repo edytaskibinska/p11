@@ -11,12 +11,12 @@ function Dropdown({ dropTitle, dropContent, isList, list }) {
       <div className="dropContent">
         {isList ? (
           <ul>
-            {list.map((item) => {
-              return <li key={item.id}>item</li>;
+            {list?.map((item, index) => {
+              return <li key={index}>{item}</li>;
             })}
           </ul>
         ) : (
-          dropContent
+          <div>{dropContent}</div>
         )}
       </div>
     </div>

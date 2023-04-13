@@ -1,30 +1,36 @@
 import React, { useEffect, useState } from "react";
 
-import "../data/data.json"
+const useFetch = (url) => {
+  const [data, setData] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
-
-function useFetch() {
-  const getData = () => {
-    fetch("data.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then(function (response) {
-        console.log("resoponse",response);
+  const fetchJson = () => {
+    fetch(url)
+      .then((response) => {
         return response.json();
       })
-      .then(function (myJson) {
-        console.log("myJson",myJson);
+      .then((jsonData) => {
+        setData(jsonData);
+        if (data) {
+          setIsLoaded(true);
+        }
       });
+      //>TODO!!!
+    //   .catch((error) => {
+    //    const errMessage = `ERROR : ${error.message}`;
+
+    //     console.log("error",error);
+    //     console.log("error.message",error.message);
+    //     setErrorMessage(errMessage);
+    //     console.error(error.message);
+    //   });
   };
 
   useEffect(() => {
-    getData();
-  }, []);
-
-  return {  };
-}
+    fetchJson();
+  }, [url]);
+  return { data, isLoaded, errorMessage };
+};
 
 export default useFetch;

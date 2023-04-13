@@ -1,31 +1,28 @@
-import './App.css';
-import {Tag, Thumb, Dropdown} from "../src/components"
-import "./data/data.json"
-import useFetch from './hooks/useFetch';
+import "./App.css";
+import { Tag, Thumb, Dropdown } from "../src/components";
+import useFetch from "./hooks/useFetchAsync";
+//import useFetch from "./hooks/useFetch";
 
 //temp
 
-const listt = ['hello', 'world', 'welcome']
 
 //end temp
 function App() {
-  //old 
-  // const {data, loading, error} = useFetch("./data/data.json")
-  // if(loading) return <div>LOADING ... </div>
-  // if(error) console.log(error)
-useFetch()
+  const currentData = useFetch("./data.json");
+  const tempList = currentData?.data[0]?.equipments
+  const tempDesc = currentData?.data[0]?.description
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
+      <header className="App-header"></header>
       <section>
-
         <Tag>Tag example</Tag>
-        <Thumb text="ygyzg"/>
-        {/* <>  {console.log("data", data)}</> */}
-        {/* <Dropdown dropTitle="Titile hjhz bqz nj" dropContent="lipsum" isList list={listt}/> */}
+        <Thumb text="ygyzg" />
+        <>  {console.log("list", currentData?.data[0]?.description)}</>
+        <Dropdown dropTitle="Equipement" dropContent="lipsum" isList list={tempList}/>
+        <Dropdown dropTitle="Respect" dropContent={tempDesc}/>
+        {!currentData.isLoaded && <div>LOADING ... </div>}
+        
       </section>
-      
     </div>
   );
 }
