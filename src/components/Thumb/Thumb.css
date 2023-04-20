@@ -21,6 +21,10 @@
   top: 0%;
   bottom: 0%;
 }
+.thumb img {
+  width: 100%;
+  height: 100%;
+}
 .thumbText {
   position: absolute;
   bottom: 10px;

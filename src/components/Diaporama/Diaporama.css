@@ -1,0 +1,13 @@
+.diaporama {
+  border: 2px solid red;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 140px;
+  width: 100%;
+  position: relative;
+}
+.diaporama img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

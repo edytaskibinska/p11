@@ -7,16 +7,19 @@ const useFetch = (url) => {
 
   const fetchJson = () => {
     fetch(url)
-      .then((response) => {
-        return response.json();
-      })
+      .then((res) => console.log("res", res))
+      .then((res) => console.log("res.json", res.json()))
+      //.then((response) => console.log("respinse", response))
+      // .then((response) => {
+      //   return response.json();
+      // })
       .then((jsonData) => {
         setData(jsonData);
         if (data) {
           setIsLoaded(true);
         }
       });
-      //>TODO!!!
+    //>TODO!!!
     //   .catch((error) => {
     //    const errMessage = `ERROR : ${error.message}`;
 
