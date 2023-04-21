@@ -1,5 +1,4 @@
 import "./Diaporama.css";
-import { Arrow } from "../../assets/icons";
 
 function Diaporama({ imgUrl, alt}) {
   return (

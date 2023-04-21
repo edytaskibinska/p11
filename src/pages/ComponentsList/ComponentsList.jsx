@@ -1,23 +1,18 @@
-
-import { Tag, Thumb, Dropdown } from "../../components"
+import { Tag, Thumb, Dropdown } from "../../components";
 import useFetch from "../../hooks/useFetchAsync";
 
-
-function ComponentsList({ }) {
-
+function ComponentsList({}) {
   const currentData = useFetch("./data.json");
-  const tempList = currentData?.data[0]?.equipments;
-  const tempDesc = currentData?.data[0]?.description;
-
+  const { data } = currentData;
+  const tempList = data[0]?.equipments;
+  const tempDesc = data[0]?.description;
 
   return (
     <div className="componentsList">
-           <header className="App-header"></header>
+      <header className="App-header"></header>
       <section>
         <Tag>Tag example</Tag>
         <Thumb text="ygyzg" />
-        {/* <> {console.log("currentData", currentData)}</>
-        <> {console.log("list", currentData?.data[0]?.description)}</> */}
         <Dropdown
           dropTitle="Equipement"
           dropContent="lipsum"
@@ -25,7 +20,6 @@ function ComponentsList({ }) {
           list={tempList}
         />
         <Dropdown dropTitle="Respect" dropContent={tempDesc} />
-        {!currentData.isLoaded && <div>LOADING ... </div>}
       </section>
     </div>
   );

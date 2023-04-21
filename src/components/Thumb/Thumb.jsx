@@ -5,7 +5,6 @@ function Thumb({ id, text, imgUrl, alt }) {
     <div id={id} key={id} className="thumb">
       <div className="thumbBg">
         <img src={imgUrl} alt={alt} />
-
         <div className="thumbText">{text}</div>
       </div>
     </div>

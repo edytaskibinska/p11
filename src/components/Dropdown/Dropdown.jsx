@@ -1,5 +1,5 @@
 import "./Dropdown.css";
-import { Arrow } from "../../assets/icons";
+import { Arrow } from "../../assets";
 
 function Dropdown({ dropTitle, dropContent, isList, list }) {
   return (
