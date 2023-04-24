@@ -2,7 +2,7 @@ import "./Loader.css";
 
 function Loader({ children }) {
   return (
-    <div class="lds-ring">
+    <div className="lds-ring">
       <div></div>
       <div></div>
       <div></div>

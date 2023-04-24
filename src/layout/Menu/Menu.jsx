@@ -1,16 +1,14 @@
 import { Link } from "react-router-dom";
-
+// utiliser Link ou Navlink pour lmes accueil a propos
 function Menu({ menuArray }) {
   return (
     <ul className="menu">
-      {console.log("menuArray", menuArray)}
+      {/* {console.log("menuArray", menuArray)} */}
       {menuArray.map((item, index) => {
         return (
-          <li>
+          <li key={index}>
             <Link
-              //TODO index
               index={item.index}
-              key={index}
               to={item.url}
             >
               {item.linkName}

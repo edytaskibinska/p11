@@ -3,7 +3,7 @@ import useFetch from "../../hooks/useFetchAsync";
 
 import mountain from "../../assets/images/backgroundMountains.png";
 
-function About({}) {
+function About() {
   const currentData = useFetch("./data.json");
   const { data } = currentData;
 

@@ -1,13 +1,13 @@
 import "./Thumb.css";
 
-function Thumb({ id, text, imgUrl, alt }) {
+function Thumb({ id, text, imgUrl, alt, onClick }) {
   return (
-    <div id={id} key={id} className="thumb">
+    <a href={`ficheLogement/${id}`} id={id} key={id} className="thumb" onClick={onClick}>
       <div className="thumbBg">
         <img src={imgUrl} alt={alt} />
         <div className="thumbText">{text}</div>
       </div>
-    </div>
+    </a>
   );
 }
 
