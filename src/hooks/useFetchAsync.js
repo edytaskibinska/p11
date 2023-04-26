@@ -17,8 +17,8 @@ function useFetch(url) {
         if (data) {
           setIsLoaded(true);
         }
-        // console.log("HOOK data", data);
-        // console.log("HOOK isLoaded", isLoaded);
+        console.log("HOOK data", data);
+        console.log("HOOK isLoaded", isLoaded);
       } catch (error) {
         const errMessage = `ERROR : ${error}`;
         setErrorMessage(errMessage);
@@ -29,7 +29,7 @@ function useFetch(url) {
     }
 
     fetchData();
-  }, [url, data]);
+  }, [url]);
 
   return { data, isLoaded, errorMessage };
 }

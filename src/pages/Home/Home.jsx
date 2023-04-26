@@ -8,7 +8,7 @@ import mountain from "../../assets/images/backgroundMountains.png";
 function Home() {
   const currentData = useFetch("./data.json");
   const { data } = currentData;
-
+console.log("data", data)
   return (
     <article className="home">
       <Diaporama imgUrl={mountain} alt="mountain" />
