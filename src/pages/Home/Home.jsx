@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import { Diaporama, GreyBlock, Thumb, Loader } from "../../components";
 import useFetch from "../../hooks/useFetchAsync";
 
@@ -6,12 +8,9 @@ import mountain from "../../assets/images/backgroundMountains.png";
 function Home() {
   const currentData = useFetch("./data.json");
   const { data } = currentData;
-  // console.log("data", data)
 
-  const showFicheLogement = () => {
-    //useCOntext
-    console.log("onClick");
-  };
+
+
   return (
     <article className="home">
       <Diaporama imgUrl={mountain} alt="mountain" />
@@ -19,7 +18,7 @@ function Home() {
         {data.map((item, index) => {
           return (
             <Thumb
-              onClick={showFicheLogement}
+              onClick={console.log("logement id")}
               id={item.id}
               text={item.title}
               key={index}

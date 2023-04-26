@@ -20,7 +20,7 @@ export const router = createBrowserRouter(
       <Route path="page" element={<About />} />
       <Route path="components" element={<ComponentsList />} />
       <Route path="*" element={<Page404 />} />
-      <Route path={`ficheLogement/${"*"}`} element={<FicheLogement />} />
+      <Route path={`ficheLogement/:userId`} element={<FicheLogement />} />
     </Route>
   )
 );
