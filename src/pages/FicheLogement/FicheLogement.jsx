@@ -8,6 +8,8 @@ import "./FicheLogement.css";
 
 function FicheLogement() {
   const currentData = useFetch("./data.json");
+  const { data } = currentData;
+
   let { userId, id } = useParams();
   //const rentalData = datas.find((rental) => rental.id === id);
 

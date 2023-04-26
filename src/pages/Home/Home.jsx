@@ -9,8 +9,6 @@ function Home() {
   const currentData = useFetch("./data.json");
   const { data } = currentData;
 
-
-
   return (
     <article className="home">
       <Diaporama imgUrl={mountain} alt="mountain" />
@@ -18,7 +16,7 @@ function Home() {
         {data.map((item, index) => {
           return (
             <Thumb
-              onClick={console.log("logement id")}
+              //onClick={console.log("logement id")}
               id={item.id}
               text={item.title}
               key={index}
