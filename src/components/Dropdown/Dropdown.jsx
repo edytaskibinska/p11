@@ -1,4 +1,4 @@
-import "./Dropdown.css";
+import "./Dropdown.scss";
 import { Arrow } from "../../assets";
 
 function Dropdown({ dropTitle, dropContent, isList, list }) {

@@ -1,4 +1,4 @@
-import "./Diaporama.css";
+import "./Diaporama.scss";
 
 function Diaporama({ imgUrl, alt}) {
   return (

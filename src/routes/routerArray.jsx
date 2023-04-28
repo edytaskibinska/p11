@@ -8,7 +8,7 @@ export const routerArray = [
     linkName: "About",
   },
   {
-    url: "/logement",
+    url: "/ficheLogement",
     linkName: "FicheLogementStatic",
   },
   {
@@ -16,3 +16,4 @@ export const routerArray = [
     linkName: "components",
   }
 ];
+

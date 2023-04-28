@@ -1,5 +1,5 @@
 
-import './Tag.css';
+import './Tag.scss';
 
 function Tag({children}) {
   return <div className="tag">{children}</div>;

@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import "./Menu.scss";
+
 // utiliser Link ou Navlink pour lmes accueil a propos
 function Menu({ menuArray }) {
   return (

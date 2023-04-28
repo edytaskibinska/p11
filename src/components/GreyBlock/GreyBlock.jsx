@@ -1,4 +1,4 @@
-import "./GreyBlock.css";
+import "./GreyBlock.scss";
 
 function GreyBlock({ children }) {
   return <div className="greyBlock">{children}</div>;

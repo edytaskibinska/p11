@@ -17,20 +17,15 @@ export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />}>
       <Route index element={<Home />} />
-      <Route path="page" element={<FicheLogement />} />
-      <Route path="logement" element={<About />} />
+      <Route path="page" element={<About />} />
+      <Route 
+      // path={`ficheLogement/:userId`} 
+      path={`ficheLogement`} 
+      element={<FicheLogement />} 
+      />
       <Route path="components" element={<ComponentsList />} />
       <Route path="*" element={<Page404 />} />
-      <Route 
-      path={`ficheLogement/:userId`} 
-      element={<FicheLogement />} 
-      //HELP trouver solution pour reload page on click sur l'element dans home -> que kled data from useFetch se chargent aussi sur le route de fiche logement
-      // loader={({ params }) => {
-      //   console.log("params", params)
-      //   //return fetch(`/data/{params.teamId}`);
-      //   return fetch(`./data.json`);
-      // }} 
-      />
+    
     </Route>
   )
 );
