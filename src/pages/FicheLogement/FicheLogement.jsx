@@ -1,5 +1,6 @@
 import { Diaporama, GreyBlock, Thumb, Loader } from "../../components";
 import useFetch from "../../hooks/useFetchAsync";
+import { urlSettings } from "../../routes/settings";
 
 import mountain from "../../assets/images/backgroundMountains.png";
 import { useParams } from "react-router-dom";
@@ -7,12 +8,20 @@ import { useParams } from "react-router-dom";
 import "./FicheLogement.css";
 
 function FicheLogement() {
-  const currentData = useFetch("./data.json");
+  const { server, port, dataUrl } = urlSettings;
+  let { userId, id } = useParams();
+
+  // const currentData = useFetch(`${server}:${port}/ficheLogement/${userId}/${dataUrl}`);
+  const currentData = useFetch(`${server}:${port}/${userId}/ficheLogement/data.json`);
+  console.log("FL url", `${server}:${port}/ficheLogement/data.json`)
+  console.log("FL currentData", currentData)
+  //TODO : find error - mail de Tonn
+
   const { data } = currentData;
+  
   //HELP ici les data ne se chargent pas puisque l'app ne se reload pas
   console.log("DATA", data);
 
-  let { userId, id } = useParams();
 
   return (
     <article className="ficheLogement">

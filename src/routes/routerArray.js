@@ -8,6 +8,10 @@ export const routerArray = [
     linkName: "About",
   },
   {
+    url: "/logement",
+    linkName: "FicheLogementStatic",
+  },
+  {
     url: "/components",
     linkName: "components",
   }

@@ -17,7 +17,8 @@ export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />}>
       <Route index element={<Home />} />
-      <Route path="page" element={<About />} />
+      <Route path="page" element={<FicheLogement />} />
+      <Route path="logement" element={<About />} />
       <Route path="components" element={<ComponentsList />} />
       <Route path="*" element={<Page404 />} />
       <Route 

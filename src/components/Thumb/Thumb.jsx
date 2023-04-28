@@ -1,5 +1,5 @@
 import "./Thumb.css";
-
+//TODO use Link instead a
 function Thumb({ id, text, imgUrl, alt, onClick }) {
   return (
     <a href={`ficheLogement/${id}`} id={id} key={id} className="thumb" onClick={onClick}>

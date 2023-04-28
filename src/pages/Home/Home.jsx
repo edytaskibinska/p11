@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 
 import { Diaporama, GreyBlock, Thumb, Loader } from "../../components";
 import useFetch from "../../hooks/useFetchAsync";
+import { urlSettings } from "../../routes/settings";
 
 import mountain from "../../assets/images/backgroundMountains.png";
 
 function Home() {
-  const currentData = useFetch("./data.json");
+  const { server, port, dataUrl } = urlSettings;
+  const currentData = useFetch(`${server}:${port}/${dataUrl}`);
   const { data } = currentData;
 console.log("data", data)
   return (
@@ -16,7 +18,6 @@ console.log("data", data)
         {data.map((item, index) => {
           return (
             <Thumb
-              //onClick={console.log("logement id")}
               id={item.id}
               text={item.title}
               key={index}
