@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 
 import "./FicheLogement.scss";
 
+//test without fetch data 
 const slides = [
   { url: "https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/wp-content/uploads/2021/08/download-7.jpg", title: "beach" },
   { url: "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg", title: "boat" },
