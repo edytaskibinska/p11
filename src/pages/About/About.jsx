@@ -1,8 +1,7 @@
-import { Diaporama, Dropdown } from "../../components";
+import { Diaporama, Dropdown, Block } from "../../components";
 import useFetch from "../../hooks/useFetchAsync";
 
 import mountain from "../../assets/images/backgroundMountains.png";
-
 
 function About() {
   const currentData = useFetch("./data.json");
@@ -14,7 +13,9 @@ function About() {
   return (
     <article className="about">
       <Diaporama imgUrl={mountain} alt="mountain" />
-      <Dropdown dropTitle="Respect" dropContent={tempDesc} />
+      <Block>
+        <Dropdown dropTitle="Respect" dropContent={tempDesc} />
+      </Block>
     </article>
   );
 }

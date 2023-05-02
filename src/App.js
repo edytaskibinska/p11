@@ -1,6 +1,9 @@
 import { RouterProvider } from "react-router-dom";
 import { createContext } from "react";
 import { router } from "./routes/browserRouter";
+import "./globalStyles/normalize.scss"
+import "./globalStyles/reset.scss"
+
 
 export const AppDataContext = createContext([]);
 

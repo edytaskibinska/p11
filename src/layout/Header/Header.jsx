@@ -1,4 +1,5 @@
 import { Logo } from "../../assets";
+import "./Header.scss";
 
 function Header({ children }) {
   return <header className="header">

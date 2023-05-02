@@ -1,0 +1,40 @@
+.gallery {
+  border-radius: 25px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+  height: 300px;
+  background-color: grey;
+
+  .galleryContainer {
+    position: absolute;
+    border: 2px solid blue;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .imgGalleryStyle {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  //TODO refacto mixin
+  .leftArrowStyles {
+    border: 1px solid red;
+    z-index: 1;
+    cursor: "pointer";
+  }
+
+  .rightArrowStyles {
+    border: 1px solid red;
+    z-index: 1;
+    cursor: "pointer";
+  }
+  .galleryPager {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}

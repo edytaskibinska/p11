@@ -1,3 +1,5 @@
+import "./Content.scss"
+
 function Content({ children }) {
   return (
     <div className="content">

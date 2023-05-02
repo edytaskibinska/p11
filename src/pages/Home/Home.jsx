@@ -13,7 +13,7 @@ function Home() {
 console.log("data", data)
   return (
     <article className="home">
-      <Diaporama imgUrl={mountain} alt="mountain" />
+      <Diaporama imgUrl={mountain} alt="mountain" text="Chez vous, partout et ailleurs"/>
       <GreyBlock>
         {data.map((item, index) => {
           return (

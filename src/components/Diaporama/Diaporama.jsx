@@ -1,8 +1,9 @@
 import "./Diaporama.scss";
 
-function Diaporama({ imgUrl, alt}) {
+function Diaporama({ imgUrl, alt, text}) {
   return (
     <div className="diaporama">
+      <p className="text">{text}</p>
       <img src={imgUrl} alt={alt} />
     </div>
   );
