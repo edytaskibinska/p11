@@ -13,7 +13,7 @@ function About() {
   return (
     <article className="about">
       <Diaporama imgUrl={mountain} alt="mountain" />
-      <Block>
+      <Block withPadding >
         <Dropdown dropTitle="Respect" dropContent={tempDesc} />
       </Block>
     </article>

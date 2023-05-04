@@ -1,13 +1,14 @@
 .dropdown {
   border-radius: 10px;
-  border: 1px solid red;
   background-color: #f6f6f6;
   color: #fff;
   font-size: 14px;
   position: relative;
   overflow: hidden;
   margin: 10px;
+  height: 52px;
   &.open {
+    height: auto;
     svg {
       top: 5px;
     }

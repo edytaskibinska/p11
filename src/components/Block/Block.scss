@@ -1,4 +1,19 @@
 .block {
-  background-color: #F6F6F6;
-  padding: 25px;
+  &.withPadding {
+    padding: 25px;
+  }
+  &.twoCols {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    & > * {
+      flex: 50%;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+    }
+  }
 }
