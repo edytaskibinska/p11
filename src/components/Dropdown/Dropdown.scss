@@ -5,9 +5,23 @@
   color: #fff;
   font-size: 14px;
   position: relative;
-  min-height: 100px;
   overflow: hidden;
   margin: 10px;
+  &.open {
+    svg {
+      top: 5px;
+    }
+    .dropContent {
+      padding: 10px;
+      display: block;
+    }
+  }
+  svg {
+    top: -5px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+  }
   .dropTitle {
     border-radius: 10px;
     background-color: #ff6060;
@@ -19,7 +33,7 @@
   }
   .dropContent {
     color: #ff6060;
-    padding: 10px;
+    display: none;
     ul {
       margin-block-start: 0;
       margin-block-end: 0;

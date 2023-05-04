@@ -1,14 +1,22 @@
 import "./Dropdown.scss";
 import { Arrow } from "../../assets";
 
+import { useState } from "react";
+
 function Dropdown({ dropTitle, dropContent, isList, list }) {
+  const [open, setOpen] = useState(true);
+
+  const openDropdown = () => {
+    open ? setOpen(false) : setOpen(true);
+  };
+
   return (
-    <div className="dropdown">
-      <div className="dropTitle">
+    <div className={`dropdown ${open ? "open" : ""} `}>
+      <div className="dropTitle" onClick={openDropdown}>
         {dropTitle}
-        <Arrow />
+        <Arrow width="80" height="80" rotate={`${open ? 90 : 270} `} />
       </div>
-      <div className="dropContent">
+      <div className={`dropContent ${open ? "open" : ""} `}>
         {isList ? (
           <ul>
             {list?.map((item, index) => {

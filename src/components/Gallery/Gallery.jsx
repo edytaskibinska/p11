@@ -28,17 +28,15 @@ const Gallery = ({ slides }) => {
     <div className="gallery">
       <div className="galleryContainer">
         <div className="leftArrowStyles" onClick={goPrevious}>
-          PREV
-          <Arrow />
+-          <Arrow width="80" height="80" rotate="0"/>
         </div>
         <div className="rightArrowStyles" onClick={goNext}>
-          NEXT
-          <Arrow />
+          <Arrow width="80" height="80" rotate="180" />
         </div>
       </div>
       <div className="imgGalleryStyle" style={galleryStyleWithBg}></div>
       <div className="galleryPager">  
-        pager: : {currentIndex + 1} /{slides.length}
+        {currentIndex + 1} / {slides.length}
       </div>
     </div>
   );
