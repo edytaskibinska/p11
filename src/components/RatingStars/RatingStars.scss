@@ -1,0 +1,18 @@
+.ratingStars {
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &.active {
+      path {
+        fill: #ff6060;
+      }
+    }
+    &.disabled {
+      path {
+        fill: #e3e3e3;
+      }
+    }
+  }
+}

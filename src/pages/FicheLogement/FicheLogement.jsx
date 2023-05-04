@@ -6,9 +6,10 @@ import {
   Block,
   Dropdown,
   Gallery,
-  Title,
+  RatingStars,
   Subtitle,
   Tag,
+  Title,
 } from "../../components";
 import useFetch from "../../hooks/useFetchAsync";
 import { urlSettings } from "../../routes/settings";
@@ -73,6 +74,9 @@ function FicheLogement() {
         {tags.map((tag) => {
           return <Tag>{tag}</Tag>;
         })}
+        
+        <RatingStars />
+
         <Block twoCols>
           <Dropdown dropTitle="Respect" dropContent={tempDesc} />
           <Dropdown

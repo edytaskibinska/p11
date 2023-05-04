@@ -1,4 +1,4 @@
-import { Tag, Thumb, Dropdown } from "../../components";
+import { Tag, Thumb, Dropdown, RatingStars } from "../../components";
 import useFetch from "../../hooks/useFetchAsync";
 
 function ComponentsList({}) {
@@ -12,6 +12,8 @@ function ComponentsList({}) {
       <header className="App-header"></header>
       <section>
         <Tag>Tag example</Tag>
+        <RatingStars />
+
         <Thumb text="ygyzg" />
         <Dropdown
           dropTitle="Equipement"
