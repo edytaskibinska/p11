@@ -16,4 +16,31 @@
       }
     }
   }
+  @media all and (max-width: 750px) {
+    &.twoCols {
+      flex-direction: column;
+      & > * {
+       margin-left: 0px;
+       margin-right: 0px;
+      }
+    }
+    &.special {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+  }
+  @media all and (max-width: 450px) {
+    &.special {
+      flex-direction: column-reverse;
+      .ratingStars,
+      .author {
+        justify-content: flex-start;
+        .text {
+          text-align: left;
+        }
+      }
+
+    }
+  }
 }

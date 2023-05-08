@@ -18,4 +18,7 @@
       }
     }
   }
+  @media all and (max-width: 750px) {
+    justify-content: flex-start;
+  }
 }

@@ -14,7 +14,10 @@ function About() {
     <article className="about">
       <Diaporama imgUrl={mountain} alt="mountain" />
       <Block withPadding >
+        <Dropdown dropTitle="Fiabilité" dropContent={tempDesc} />
         <Dropdown dropTitle="Respect" dropContent={tempDesc} />
+        <Dropdown dropTitle="Services" dropContent={tempDesc} />
+        <Dropdown dropTitle="Securité" dropContent={tempDesc} />
       </Block>
     </article>
   );

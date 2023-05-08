@@ -71,21 +71,21 @@ function FicheLogement() {
         FicheLogement static
         <Gallery slides={slides} />
         <Block twoCols>
-          <div>
+          <Block>
             <Title>Cozy loft on the Canal Saint-Martin</Title>
             <Subtitle>Paris, Île-de-France</Subtitle>
             {tags.map((tag) => {
               return <Tag>{tag}</Tag>;
             })}
-          </div>
-          <div>
+          </Block>
+          <Block special>
             <Author
               surname="Jean-pierre"
               name="Bonbon"
               photo="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/wp-content/uploads/2021/08/download-7.jpg"
             />
             <RatingStars />
-          </div>
+          </Block>
         </Block>
         <Block twoCols>
           <Dropdown dropTitle="Respect" dropContent={tempDesc} />
