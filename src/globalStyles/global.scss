@@ -3,3 +3,13 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout .content {
+  flex-grow: 1;
+}
