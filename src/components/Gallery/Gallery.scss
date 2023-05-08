@@ -30,6 +30,10 @@
 
   .rightArrowStyles {
     @include arrow-style;
+    svg {
+      position: relative;
+      right: 10px;
+    }
   }
   .galleryPager {
     position: absolute;
