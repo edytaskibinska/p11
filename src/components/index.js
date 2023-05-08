@@ -1,3 +1,4 @@
+import Author from "./Author/Author";
 import Block from "./Block/Block";
 import Dropdown from "./Dropdown/Dropdown";
 import Diaporama from "./Diaporama/Diaporama";
@@ -12,6 +13,7 @@ import Title from "./Title/Title";
 import Thumb from "./Thumb/Thumb";
 
 export {
+  Author,
   Block,
   Dropdown,
   Diaporama,

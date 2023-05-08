@@ -3,6 +3,7 @@ import {
   GreyBlock,
   Thumb,
   Loader,
+  Author,
   Block,
   Dropdown,
   Gallery,
@@ -69,14 +70,23 @@ function FicheLogement() {
       <article className="ficheLogement">
         FicheLogement static
         <Gallery slides={slides} />
-        <Title>Cozy loft on the Canal Saint-Martin</Title>
-        <Subtitle>Paris, Île-de-France</Subtitle>
-        {tags.map((tag) => {
-          return <Tag>{tag}</Tag>;
-        })}
-        
-        <RatingStars />
-
+        <Block twoCols>
+          <div>
+            <Title>Cozy loft on the Canal Saint-Martin</Title>
+            <Subtitle>Paris, Île-de-France</Subtitle>
+            {tags.map((tag) => {
+              return <Tag>{tag}</Tag>;
+            })}
+          </div>
+          <div>
+            <Author
+              surname="Jean-pierre"
+              name="Bonbon"
+              photo="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/wp-content/uploads/2021/08/download-7.jpg"
+            />
+            <RatingStars />
+          </div>
+        </Block>
         <Block twoCols>
           <Dropdown dropTitle="Respect" dropContent={tempDesc} />
           <Dropdown

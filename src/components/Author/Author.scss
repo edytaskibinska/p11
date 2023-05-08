@@ -1,0 +1,24 @@
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .text {
+    color: #ff6060;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    text-align: right;
+  }
+  .photo {
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    border-radius: 64px;
+    margin-left: 5px;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
