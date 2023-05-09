@@ -20,7 +20,7 @@ import { useParams } from "react-router-dom";
 
 import "./FicheLogement.scss";
 
-//test without fetch data
+//TEMP
 const slides = [
   {
     url: "https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/wp-content/uploads/2021/08/download-7.jpg",
@@ -79,8 +79,8 @@ function FicheLogement() {
           </Block>
           <Block special>
             <Author
-              surname="Jean-pierre"
-              name="Bonbon"
+              surname="Jean-Pierre"
+              name="Dufour"
               photo="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/wp-content/uploads/2021/08/download-7.jpg"
             />
             <RatingStars />

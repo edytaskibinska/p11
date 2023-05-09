@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Menu.scss";
 
 // utiliser Link ou Navlink pour lmes accueil a propos
@@ -9,12 +9,9 @@ function Menu({ menuArray }) {
       {menuArray.map((item, index) => {
         return (
           <li key={index}>
-            <Link
-              index={item.index}
-              to={item.url}
-            >
+            <NavLink className="navLink" index={item.index} to={item.url}>
               {item.linkName}
-            </Link>
+            </NavLink>
           </li>
         );
       })}
