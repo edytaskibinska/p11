@@ -13,7 +13,7 @@ export const routerArray = [
   },
   {
     url: "/components",
-    linkName: "components",
+    linkName: "<C>",
   }
 ];
 

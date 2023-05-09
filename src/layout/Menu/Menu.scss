@@ -1,7 +1,18 @@
 .menu {
-    display: flex;
+  display: flex;
+  a {
+    color: #ff6060;
+    padding: 20px;
+    font-size: 24px;
+  }
+  @media all and (max-width: 950px) {
     a {
-        color: #ff6060;
-        padding: 20px;
+        font-size: 18px;
+      }
+  }
+  @media all and (max-width: 750px) {
+    a {
+      font-size: 12px;
     }
   }
+}

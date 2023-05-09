@@ -68,7 +68,6 @@ function FicheLogement() {
       {/* {!currentData.isLoaded && <Loader />} */}
       {/* </article> */}
       <article className="ficheLogement">
-        FicheLogement static
         <Gallery slides={slides} />
         <Block twoCols>
           <Block>

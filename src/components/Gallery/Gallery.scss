@@ -44,4 +44,20 @@
     font-weight: 500;
     font-size: 18px;
   }
+  @media all and (max-width: 750px) {
+    border-radius: 10px;
+    height: 255px;
+    .galleryContainer {
+      top: calc(50% - 10px);
+    }
+    .leftArrowStyles,
+    .rightArrowStyles {
+      svg {
+        height: 20px;
+      }
+    }
+    .galleryPager {
+      display: none;
+    }
+  }
 }

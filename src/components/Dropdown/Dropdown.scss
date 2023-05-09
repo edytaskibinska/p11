@@ -2,10 +2,10 @@
   border-radius: 10px;
   background-color: #f6f6f6;
   color: #fff;
-  font-size: 18px;//was 14px .. 
+  font-size: 18px;
   position: relative;
   overflow: hidden;
-  margin: 10px;
+  margin: 10px 10px 30px 10px;
   height: 52px;
   &.open {
     height: auto;
@@ -42,6 +42,29 @@
     }
     li {
       list-style: none;
+    }
+  }
+  @media all and (max-width: 750px) {
+    margin: 5px 0px 10px 0px;
+    font-size: 13px;
+    border-radius: 5px;
+    height: 30px;
+    .dropTitle {
+      border-radius: 5px;
+      padding: 0 10px;
+    }
+    svg {
+      top: -3px;
+      width: 14px;
+    }
+    &.open {
+      height: auto;
+      svg {
+        top: 2px;
+      }
+    }
+    .dropTitle {
+      line-height: 30px;
     }
   }
 }

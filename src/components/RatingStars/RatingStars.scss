@@ -20,5 +20,12 @@
   }
   @media all and (max-width: 750px) {
     justify-content: flex-start;
+    button {
+      padding: 1px 3px;
+      svg {
+        height: 13px;
+        width: 13px;
+      }
+    }
   }
 }

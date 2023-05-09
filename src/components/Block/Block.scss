@@ -17,6 +17,9 @@
     }
   }
   @media all and (max-width: 750px) {
+    &.withPadding {
+      padding: 0;
+    }
     &.twoCols {
       flex-direction: column;
       & > * {

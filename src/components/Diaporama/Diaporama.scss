@@ -18,5 +18,12 @@
     color: white;
     font-size: 48px;
     margin: 0 auto;
+    padding: 20px;
+  }
+  @media all and (max-width: 750px) {
+    border-radius: 10px;
+    .text {
+      font-size: 24px;
+    }
   }
 }

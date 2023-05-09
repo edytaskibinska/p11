@@ -6,11 +6,9 @@
   position: relative;
   min-height: 200px;
   overflow: hidden;
-  margin-top: 10px;
   display: block;
   width: 100%;
-  max-width: 32%;
-  margin: 5px;
+  flex: 1 1 30%;
   .thumbBg {
     background: linear-gradient(
       180deg,
@@ -38,13 +36,13 @@
 
 @media all and (max-width: 880px) {
   .thumb {
-    max-width: 48%;
+    flex: 1 1 45%;
   }
 }
 
 @media all and (max-width: 630px) {
   .thumb {
-    max-width: 100%;
+    flex: 1 1 100%;
   }
 }
 
