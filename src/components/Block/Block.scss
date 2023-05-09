@@ -23,8 +23,8 @@
     &.twoCols {
       flex-direction: column;
       & > * {
-       margin-left: 0px;
-       margin-right: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
       }
     }
     &.special {
@@ -43,7 +43,6 @@
           text-align: left;
         }
       }
-
     }
   }
 }

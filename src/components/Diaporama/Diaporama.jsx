@@ -1,6 +1,6 @@
 import "./Diaporama.scss";
 
-function Diaporama({ imgUrl, alt, text}) {
+function Diaporama({ imgUrl, alt, text }) {
   return (
     <div className="diaporama">
       <p className="text">{text}</p>

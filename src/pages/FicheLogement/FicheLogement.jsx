@@ -73,8 +73,8 @@ function FicheLogement() {
           <Block>
             <Title>Cozy loft on the Canal Saint-Martin</Title>
             <Subtitle>Paris, Île-de-France</Subtitle>
-            {tags.map((tag) => {
-              return <Tag>{tag}</Tag>;
+            {tags.map((tag, index) => {
+              return <Tag key={index}>{tag}</Tag>;
             })}
           </Block>
           <Block special>

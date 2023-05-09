@@ -28,14 +28,14 @@ const Gallery = ({ slides }) => {
     <div className="gallery">
       <div className="galleryContainer">
         <div className="leftArrowStyles" onClick={goPrevious}>
--          <Arrow width="80" height="80" rotate="0"/>
+          - <Arrow width="80" height="80" rotate="0" />
         </div>
         <div className="rightArrowStyles" onClick={goNext}>
           <Arrow width="80" height="80" rotate="180" />
         </div>
       </div>
       <div className="imgGalleryStyle" style={galleryStyleWithBg}></div>
-      <div className="galleryPager">  
+      <div className="galleryPager">
         {currentIndex + 1} / {slides.length}
       </div>
     </div>

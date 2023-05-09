@@ -1,6 +1,6 @@
 import "./Loader.scss";
 
-function Loader({ children }) {
+function Loader() {
   return (
     <div className="lds-ring">
       <div></div>

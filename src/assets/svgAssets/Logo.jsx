@@ -1,4 +1,4 @@
-function Logo({color}) {
+function Logo({ color }) {
   return (
     <svg
       width="122"
