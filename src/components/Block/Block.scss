@@ -16,11 +16,28 @@
       }
     }
   }
+  &.cols3to2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    & > * {
+      &:first-child {
+        flex: 70%;
+        margin-left: 0;
+      }
+      &:nth-child(2) {
+        flex: 30%;
+        margin-right: 0;
+      }
+    }
+  }
+
   @media all and (max-width: 750px) {
     &.withPadding {
       padding: 0;
     }
-    &.twoCols {
+    &.twoCols,
+    &.cols3to2 {
       flex-direction: column;
       & > * {
         margin-left: 0px;

@@ -69,7 +69,7 @@ function FicheLogement() {
       {/* </article> */}
       <article className="ficheLogement">
         <Gallery slides={slides} />
-        <Block twoCols>
+        <Block cols3to2>
           <Block>
             <Title>Cozy loft on the Canal Saint-Martin</Title>
             <Subtitle>Paris, Île-de-France</Subtitle>
