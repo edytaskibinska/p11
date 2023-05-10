@@ -23,21 +23,27 @@ const Gallery = ({ slides }) => {
     ...gallerySlideStyle,
     backgroundImage: `url(${slides[currentIndex].url})`,
   };
-
+  const multipleSlides = slides.length > 1;
+  
   return (
     <div className="gallery">
-      <div className="galleryContainer">
-        <div className="leftArrowStyles" onClick={goPrevious}>
-          - <Arrow width="80" height="80" rotate="0" />
+      {multipleSlides && (
+        <div className="galleryContainer">
+          <div className="leftArrowStyles" onClick={goPrevious}>
+            - <Arrow width="80" height="80" rotate="0" />
+          </div>
+          <div className="rightArrowStyles" onClick={goNext}>
+            <Arrow width="80" height="80" rotate="180" />
+          </div>
         </div>
-        <div className="rightArrowStyles" onClick={goNext}>
-          <Arrow width="80" height="80" rotate="180" />
-        </div>
-      </div>
+      )}
+
       <div className="imgGalleryStyle" style={galleryStyleWithBg}></div>
-      <div className="galleryPager">
-        {currentIndex + 1} / {slides.length}
-      </div>
+      {multipleSlides && (
+        <div className="galleryPager">
+          {currentIndex + 1} / {slides.length}
+        </div>
+      )}
     </div>
   );
 };

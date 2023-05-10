@@ -4,7 +4,7 @@ import { Arrow } from "../../assets";
 import { useState } from "react";
 
 function Dropdown({ dropTitle, dropContent, isList, list }) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const openDropdown = () => {
     open ? setOpen(false) : setOpen(true);
