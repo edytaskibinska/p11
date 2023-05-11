@@ -6,14 +6,6 @@ export const routerArray = [
   {
     url: "/page",
     linkName: "About",
-  },
-  {
-    url: "/ficheLogement",
-    linkName: "FicheLogementStatic",
-  },
-  {
-    url: "/components",
-    linkName: "<C>",
   }
 ];
 

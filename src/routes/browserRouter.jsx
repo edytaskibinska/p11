@@ -1,6 +1,6 @@
 import { Layout } from "../layout";
 
-import { Home, About, ComponentsList, Page404, FicheLogement} from "../pages";
+import { Home, About, ComponentsList, Page404, FicheLogement } from "../pages";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -10,7 +10,7 @@ import { routerArray } from "./routerArray";
 import { Outlet } from "react-router-dom";
 
 const Root = () => {
-  return <Layout menu={routerArray} content={<Outlet />}/>;
+  return <Layout menu={routerArray} content={<Outlet />} />;
 };
 
 export const router = createBrowserRouter(
@@ -18,14 +18,9 @@ export const router = createBrowserRouter(
     <Route path="/" element={<Root />}>
       <Route index element={<Home />} />
       <Route path="page" element={<About />} />
-      <Route 
-      // path={`ficheLogement/:userId`} 
-      path={`ficheLogement`} 
-      element={<FicheLogement />} 
-      />
+      <Route path={`ficheLogement/:userId`} element={<FicheLogement />} />
       <Route path="components" element={<ComponentsList />} />
       <Route path="*" element={<Page404 />} />
-    
     </Route>
   )
 );

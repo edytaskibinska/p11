@@ -1,3 +1,7 @@
+
+# IMPORTANT NOTE : 
+This project runs on port 1024 to manage the data from useFetch hook in home and about pages
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

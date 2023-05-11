@@ -10,10 +10,14 @@ function Home() {
   const { server, port, dataUrl } = urlSettings;
   const currentData = useFetch(`${server}:${port}/${dataUrl}`);
   const { data } = currentData;
-console.log("data", data)
+  //console.log("data", data);
   return (
     <article className="home">
-      <Diaporama imgUrl={mountain} alt="mountain" text="Chez vous, partout et ailleurs"/>
+      <Diaporama
+        imgUrl={mountain}
+        alt="mountain"
+        text="Chez vous, partout et ailleurs"
+      />
       <GreyBlock>
         {data.map((item, index) => {
           return (

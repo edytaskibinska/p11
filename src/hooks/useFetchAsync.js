@@ -12,13 +12,14 @@ function useFetch(url) {
         if (!response.ok) {
           throw new Error("Network response was not OK");
         }
+        console.log(" OK response", response)
         const jsonData = await response.json();
         setData(jsonData);
         if (data) {
           setIsLoaded(true);
         }
-        console.log("HOOK data", data);
-        console.log("HOOK isLoaded", isLoaded);
+        // console.log("HOOK data", data);
+        // console.log("HOOK isLoaded", isLoaded);
       } catch (error) {
         const errMessage = `ERROR : ${error}`;
         setErrorMessage(errMessage);

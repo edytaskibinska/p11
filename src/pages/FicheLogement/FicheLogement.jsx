@@ -15,88 +15,56 @@ import {
 import useFetch from "../../hooks/useFetchAsync";
 import { urlSettings } from "../../routes/settings";
 
-import mountain from "../../assets/images/backgroundMountains.png";
 import { useParams } from "react-router-dom";
 
 import "./FicheLogement.scss";
-
-//TEMP
-const slides = [
-  {
-    url: "https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/wp-content/uploads/2021/08/download-7.jpg",
-    title: "beach",
-  },
-  {
-    url: "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg",
-    title: "boat",
-  },
-  {
-    url: "https://assets.architecturaldesigns.com/plan_assets/341202070/large/420028WNT_Render_1660597652.jpg",
-    title: "forest",
-  },
-];
-
-const tags = ["cosy", "canal", "Paris 10"];
+import Page404 from "../Page404/Page404";
 
 function FicheLogement() {
   // const { server, port, dataUrl } = urlSettings;
-  // let { userId, id } = useParams();
-  // const currentData = useFetch(`${server}:${port}/${userId}/ficheLogement/data.json`);
-  // console.log("FL url", `${server}:${port}/ficheLogement/data.json`)
-  // console.log("FL currentData", currentData)
-  // //TODO : find error - mail de Tonny
-
-  // const { data } = currentData;
-
-  // //HELP ici les data ne se chargent pas puisque l'app ne se reload pas
-  // console.log("DATA", data);
-  const currentData = useFetch("./data.json");
+  let { userId } = useParams();
+  const { server, port, dataUrl } = urlSettings;
+  const currentData = useFetch(`${server}:${port}/${dataUrl}`);
   const { data } = currentData;
-  const tempList = data[0]?.equipments;
-  const tempDesc = data[0]?.description;
-  return (
-    <>
-      {/* <article className="ficheLogement">
-            FicheLogement dynamic  */}
 
-      {/* FicheLogement ${userId} */}
-      {/* {data.find(rental => {
-         console.log("userId", userId);
-         console.log("rental.id", rental.id);
-        return rental.id === userId &&  <Diaporama imgUrl={mountain} alt="mountain" /> 
-      })} */}
-      {/* {!currentData.isLoaded && <Loader />} */}
-      {/* </article> */}
-      <article className="ficheLogement">
-        <Gallery slides={slides} />
-        <Block cols3to2>
-          <Block>
-            <Title>Cozy loft on the Canal Saint-Martin</Title>
-            <Subtitle>Paris, Île-de-France</Subtitle>
-            {tags.map((tag, index) => {
-              return <Tag key={index}>{tag}</Tag>;
-            })}
-          </Block>
-          <Block special>
-            <Author
-              surname="Jean-Pierre"
-              name="Dufour"
-              photo="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/wp-content/uploads/2021/08/download-7.jpg"
-            />
-            <RatingStars />
-          </Block>
+  const rentalData = data.find((rental) => {
+    return rental.id === userId;
+  });
+
+  console.log("rentalData", rentalData);
+
+  return rentalData ? (
+    <article className="ficheLogement">
+      <Gallery slides={rentalData.pictures} />
+      <Block cols3to2>
+        <Block>
+          <Title>{rentalData.title}</Title>
+          <Subtitle>{rentalData.location}</Subtitle>
+          {rentalData.tags.map((tag, index) => {
+            return <Tag key={index}>{tag}</Tag>;
+          })}
         </Block>
-        <Block twoCols>
-          <Dropdown dropTitle="Respect" dropContent={tempDesc} />
-          <Dropdown
-            dropTitle="Equipement"
-            dropContent="lipsum"
-            isList
-            list={tempList}
+        <Block special>
+          <Author
+            surname={rentalData.host.name}
+            name={rentalData.host.name.substring(0)}
+            photo={rentalData.host.picture}
           />
+          <RatingStars isRated={rentalData.rating} />
         </Block>
-      </article>
-    </>
+      </Block>
+      <Block twoCols>
+        <Dropdown dropTitle="Respect" dropContent={rentalData.description} />
+        <Dropdown
+          dropTitle="Equipement"
+          dropContent="lipsum"
+          isList
+          list={rentalData.equipments}
+        />
+      </Block>
+    </article>
+  ) : (
+    <Page404 />
   );
 }
 

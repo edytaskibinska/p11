@@ -19,12 +19,14 @@ const Gallery = ({ slides }) => {
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
+  //console.log("slides[currentIndex].url", slides[currentIndex].url)
   const galleryStyleWithBg = {
     ...gallerySlideStyle,
-    backgroundImage: `url(${slides[currentIndex].url})`,
+    backgroundImage: `url(${slides[currentIndex]})`,
   };
+
   const multipleSlides = slides.length > 1;
-  
+
   return (
     <div className="gallery">
       {multipleSlides && (

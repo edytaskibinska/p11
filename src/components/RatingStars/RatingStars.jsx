@@ -3,8 +3,8 @@ import "./RatingStars.scss";
 import React, { useState } from "react";
 import { Star } from "../../assets";
 
-const RatingStars = () => {
-  const [rate, setRate] = useState(0);
+const RatingStars = ({isRated}) => {
+  const [rate, setRate] = useState(isRated);
   const [hover, setHover] = useState(0);
   return (
     <div className="ratingStars">
