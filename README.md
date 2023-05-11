@@ -1,6 +1,6 @@
 
 # IMPORTANT NOTE : 
-This project runs on port 1024 to manage the data from useFetch hook in home and about pages
+This project runs on port 1024 to manage the data from useFetch hook in home and rent pages
 
 # Getting Started with Create React App
 
