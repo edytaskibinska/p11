@@ -12,7 +12,7 @@ function useFetch(url) {
         if (!response.ok) {
           throw new Error("Network response was not OK");
         }
-        console.log(" OK response", response)
+        //console.log(" OK response", response)
         const jsonData = await response.json();
         setData(jsonData);
         if (data) {

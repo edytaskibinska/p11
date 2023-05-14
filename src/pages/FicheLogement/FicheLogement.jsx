@@ -27,11 +27,11 @@ function FicheLogement() {
     return rental.id === userId;
   });
 
-  console.log("rentalData", rentalData);
+  //console.log("rentalData", rentalData);
 
   return rentalData ? (
     <article className="ficheLogement">
-      {console.log("data exist")}
+      {/* {console.log("data exist")} */}
       <Gallery slides={rentalData.pictures} />
       <Block cols3to2>
         <Block>
@@ -62,10 +62,8 @@ function FicheLogement() {
     </article>
   ) : (
     <>
-      {console.log("PAGE 404")}
+      {/* {console.log("PAGE 404")} */}
       {console.log("errorMessage 404", errorMessage)}
-      
-
       <Page404 />
     </>
   );
