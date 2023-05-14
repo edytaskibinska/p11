@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 import { Diaporama, GreyBlock, Thumb, Loader } from "../../components";
 import useFetch from "../../hooks/useFetchAsync";
 import { urlSettings } from "../../routes/settings";
@@ -10,7 +8,6 @@ function Home() {
   const { server, port, dataUrl } = urlSettings;
   const currentData = useFetch(`${server}:${port}/${dataUrl}`);
   const { data } = currentData;
-  //console.log("data", data);
   return (
     <article className="home">
       <Diaporama

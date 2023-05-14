@@ -1,7 +1,7 @@
 import { Tag, Thumb, Dropdown, RatingStars } from "../../components";
 import useFetch from "../../hooks/useFetchAsync";
 
-function ComponentsList({}) {
+function ComponentsList() {
   const currentData = useFetch("./data.json");
   const { data } = currentData;
   const tempList = data[0]?.equipments;
@@ -13,7 +13,6 @@ function ComponentsList({}) {
       <section>
         <Tag>Tag example</Tag>
         <RatingStars />
-
         <Thumb text="ygyzg" />
         <Dropdown
           dropTitle="Equipement"

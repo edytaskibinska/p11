@@ -1,8 +1,4 @@
 import {
-  Diaporama,
-  GreyBlock,
-  Thumb,
-  Loader,
   Author,
   Block,
   Dropdown,
@@ -25,7 +21,7 @@ function FicheLogement() {
   let { userId } = useParams();
   const { server, port, dataUrl } = urlSettings;
   const currentData = useFetch(`${server}:${port}/${dataUrl}`);
-  const { data } = currentData;
+  const { data , errorMessage} = currentData;
 
   const rentalData = data.find((rental) => {
     return rental.id === userId;
@@ -35,6 +31,7 @@ function FicheLogement() {
 
   return rentalData ? (
     <article className="ficheLogement">
+      {console.log("data exist")}
       <Gallery slides={rentalData.pictures} />
       <Block cols3to2>
         <Block>
@@ -64,7 +61,13 @@ function FicheLogement() {
       </Block>
     </article>
   ) : (
-    <Page404 />
+    <>
+      {console.log("PAGE 404")}
+      {console.log("errorMessage 404", errorMessage)}
+      
+
+      <Page404 />
+    </>
   );
 }
 

@@ -7,7 +7,6 @@ function Author({ surname, name, photo }) {
         <p>{surname}</p>
         <p>{name}</p>
       </div>
-
       <div className="photo">
         <img src={photo} alt="" />
       </div>

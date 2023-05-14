@@ -19,7 +19,6 @@ const Gallery = ({ slides }) => {
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
-  //console.log("slides[currentIndex].url", slides[currentIndex].url)
   const galleryStyleWithBg = {
     ...gallerySlideStyle,
     backgroundImage: `url(${slides[currentIndex]})`,
@@ -39,7 +38,6 @@ const Gallery = ({ slides }) => {
           </div>
         </div>
       )}
-
       <div className="imgGalleryStyle" style={galleryStyleWithBg}></div>
       {multipleSlides && (
         <div className="galleryPager">

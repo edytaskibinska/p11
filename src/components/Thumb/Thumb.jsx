@@ -1,5 +1,5 @@
 import "./Thumb.scss";
-//TODO use Link instead a
+
 function Thumb({ id, text, imgUrl, alt, onClick }) {
   return (
     <a
