@@ -4,8 +4,7 @@ function Author({ surname, name, photo }) {
   return (
     <div className="author">
       <div className="text">
-        <p>{surname}</p>
-        <p>{name}</p>
+        {name}
       </div>
       <div className="photo">
         <img src={photo} alt="" />
