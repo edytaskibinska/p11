@@ -45,7 +45,7 @@ You may also see any lint errors in the console.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# OTHER SCRIPTS :  
+##  OTHER SCRIPTS :  
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
