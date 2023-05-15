@@ -20,19 +20,19 @@ This project runs on port 1024 to manage  data (from useFetch hook) simultaneous
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-# Environment versions :
+## Environment versions :
 
  npm version : 9.5.0
  node version : v18.15.0
  
- # Dependencies versions :
+ ## Dependencies versions :
 
 "react": "^18.2.0",
 "react-dom": "^18.2.0",
 "react-router-dom": "^6.10.0",
 "react-scripts": "5.0.1",
    
-# Dev dependencies versions :
+## Dev dependencies versions :
 
 "sass": "^1.62.1"
 
@@ -40,13 +40,8 @@ You may also see any lint errors in the console.
 
 
 
-
-
-
-
-
-# ABOUT CREATE REACT APP - original Readme : 
-# Getting Started with Create React App
+## ABOUT CREATE REACT APP - original Readme : 
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
