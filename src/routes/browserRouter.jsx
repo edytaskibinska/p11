@@ -1,6 +1,6 @@
 import { Layout } from "../layout";
 
-import { Home, About, ComponentsList, Page404, FicheLogement } from "../pages";
+import { Home, About, Page404, FicheLogement } from "../pages";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -19,7 +19,6 @@ export const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="page" element={<About />} />
       <Route path={`ficheLogement/:userId`} element={<FicheLogement />} />
-      <Route path="components" element={<ComponentsList />} />
       <Route path="*" element={<Page404 />} />
     </Route>
   )
