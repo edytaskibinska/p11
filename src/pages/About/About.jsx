@@ -1,7 +1,7 @@
 import { Diaporama, Dropdown, Block } from "../../components";
 import useFetch from "../../hooks/useFetchAsync";
 
-import mountain from "../../assets/images/backgroundMountains.png";
+import mountain from "../../assets/images/mountain.png";
 
 function About() {
   const currentData = useFetch("./about.json");
