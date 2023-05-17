@@ -25,10 +25,8 @@ function useFetch(url) {
         setErrorMessage(errMessage);
         // console.error(errMessage);
       }
-
       return data;
     }
-
     fetchData();
   }, [url, data]);
 
