@@ -10,6 +10,7 @@ function Thumb({ id, text, imgUrl, alt, onClick }) {
       onClick={onClick}
     >
       <div className="thumbBg">
+        <div className="thumbGradient"></div>
         <img src={imgUrl} alt={alt} />
         <div className="thumbText">{text}</div>
       </div>
